@@ -1,56 +1,31 @@
-# CodeIgniter 4 Framework
+# RESTful API CodeIgniter 4
 
-## What is CodeIgniter?
+# Instalasi
+1. Rename File env menjadi .env lalu ubah Environment Dari Production ke Development
+2. Buat Table Database Melalui Migration dengan mengetikan perintah 
+```bash
+php spark migrate
+```
+3. Selanjut Seed data member & user ke database dengan mengetikan perintah
+```bash
+php spark db:seed user member
+```
+4. Maka data siap untuk di testing
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+# Plugin Yang Tersedia
+1. [faker](https://github.com/fzaninotto/Faker)
+2. [JWT-Json_web_token](https://github.com/firebase/php-jwt)
 
-This repository holds the distributable version of the framework,
-including the user guide. It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Persyaratan Server
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
-
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
-
-
-## Important Change with index.php
-
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use Github issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Contributing
-
-We welcome contributions from the community.
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/contributing.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 7.3 or higher is required, with the following extensions installed:
+PHP versi 7.3 atau lebih tinggi diperlukan, dengan ekstensi berikut diinstal:
 
 - [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+- [libcurl](http://php.net/manual/en/curl.requirements.php) jika Anda berencana untuk menggunakan perpustakaan HTTP \ CURLRequest
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+Selain itu, pastikan ekstensi berikut diaktifkan di PHP Anda:
 
-- json (enabled by default - don't turn it off)
+- json (diaktifkan secara default - jangan matikan)
 - [mbstring](http://php.net/manual/en/mbstring.installation.php)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+- xml (diaktifkan secara default - jangan matikan)
